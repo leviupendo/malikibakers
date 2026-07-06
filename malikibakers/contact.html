@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Maliki Bakers</title>
+<meta name="description" content="Get in touch with Maliki Bakers for orders and enquiries.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo">Maliki Bakers <span>Mombasa &middot; Nairobi</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="locations.html">Locations</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero" style="padding-bottom:3.5rem;">
+  <div class="container">
+    <p class="eyebrow">Get In Touch</p>
+    <h1>Orders &amp; enquiries</h1>
+    <p class="lede">Cake orders, bulk requests, or just a question — reach us however's easiest.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="grid grid-2">
+      <div>
+        <h2>Send a message</h2>
+        <p class="placeholder-note">This form doesn't send anywhere yet — see the README for how to connect it to an email inbox (e.g. Formspree, free tier).</p>
+        <form id="contact-form">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-field">
+            <label for="branch">Which branch?</label>
+            <select id="branch" name="branch">
+              <option value="mombasa">Mombasa</option>
+              <option value="nairobi">Nairobi</option>
+              <option value="either">Either</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="border-color:var(--crust); color:var(--crust); background:var(--saffron);">Send Message</button>
+          <p id="form-note" style="display:none; margin-top:1rem; font-family:var(--font-mono); font-size:0.85rem; color:var(--hibiscus);"></p>
+        </form>
+      </div>
+
+      <div>
+        <h2>Direct contact</h2>
+        <div class="card" style="margin-bottom:1.2rem;">
+          <h3>🏝️ Mombasa</h3>
+          <p class="location-meta">Phone: 0722 925 612</p>
+          <p class="location-meta">WhatsApp: [Add WhatsApp number]</p>
+          <p class="location-meta">Email: [Add email or use shared one below]</p>
+        </div>
+        <div class="card">
+          <h3>🏙️ Nairobi</h3>
+          <p class="location-meta">Phone: 0722 925 612</p>
+          <p class="location-meta">WhatsApp: [Add WhatsApp number]</p>
+          <p class="location-meta">Email: [Add email or use shared one below]</p>
+        </div>
+        <p style="margin-top:1.2rem;">General enquiries: <a href="mailto:kigangam@gmail.com" style="color:var(--hibiscus); text-decoration:underline;">kigangam@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Maliki Bakers</h4>
+        <p style="color:var(--flour-dim); max-width:32ch;">Family bakery serving Mombasa and Nairobi, fresh every day.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="mailto:kigangam@gmail.com">kigangam@gmail.com</a></li>
+          <li><a href="tel:+254722925612">0722 925 612</a></li>
+        </ul>
+        <div class="social-links">
+          <a href="https://instagram.com/malikibakers" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://facebook.com/malikibakers" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Maliki Bakers. All rights reserved.</span>
+      <span>Mombasa &middot; Nairobi, Kenya</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
