@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order a Cake — Maliki Bakers</title>
+<meta name="description" content="Order a custom cake from Maliki Bakers — pick your flavour, size, and branch, then confirm via WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo">Maliki Bakers <span>Mombasa &middot; Nairobi</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="order.html" class="order-cta">Order Now</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="locations.html">Locations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero" style="padding-bottom:3rem;">
+  <div class="container">
+    <p class="eyebrow">Order</p>
+    <h1>Build Your Cake</h1>
+    <p class="lede">Pick a flavour and size, see the price instantly, then confirm your order over WhatsApp — Maximiller will get back to you to arrange payment and pickup or delivery.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="step-indicator">
+      <div class="step active">
+        <div class="step-circle">1</div>
+        <div class="step-label">Choose Cake</div>
+      </div>
+      <div class="step" id="step2">
+        <div class="step-circle">2</div>
+        <div class="step-label">Confirm via WhatsApp</div>
+      </div>
+      <div class="step" id="step3">
+        <div class="step-circle">3</div>
+        <div class="step-label">We Confirm &amp; Bake</div>
+      </div>
+    </div>
+
+    <div class="grid grid-2" style="align-items:start;">
+      <div>
+        <div class="form-field">
+          <label for="flavour">Cake Flavour</label>
+          <select id="flavour">
+            <optgroup label="No Fillings — KES 2,000/kg">
+              <option value="Strawberry Cake" data-price="2000">Strawberry Cake</option>
+              <option value="Vanilla Cake" data-price="2000">Vanilla Cake</option>
+              <option value="Lemon Cake" data-price="2000">Lemon Cake</option>
+              <option value="Pina Colada Cake" data-price="2000">Pina Colada Cake</option>
+              <option value="Blueberry Cake" data-price="2000">Blueberry Cake</option>
+            </optgroup>
+            <optgroup label="KES 2,500/kg">
+              <option value="Chocolate Cake" data-price="2500">Chocolate Cake</option>
+              <option value="Orange Cake" data-price="2500">Orange Cake</option>
+            </optgroup>
+            <optgroup label="Premium — KES 2,800/kg">
+              <option value="Red Velvet" data-price="2800">Red Velvet</option>
+              <option value="White Forest" data-price="2800">White Forest</option>
+              <option value="Black Forest" data-price="2800">Black Forest</option>
+            </optgroup>
+            <optgroup label="Custom">
+              <option value="Custom Wedding/Design Cake" data-price="2800">Custom Wedding/Design Cake (75% deposit required)</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="weight">Cake Weight</label>
+          <select id="weight">
+            <option value="1" selected>1 kg</option>
+            <option value="1.5">1.5 kg</option>
+            <option value="2">2 kg</option>
+            <option value="3">3 kg</option>
+            <option value="5">5 kg</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="branch">Pickup Branch</label>
+          <select id="branch">
+            <option value="Mombasa">Mombasa</option>
+            <option value="Nairobi">Nairobi</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label>Add-ons</label>
+          <label style="display:flex; align-items:center; gap:0.5rem; font-family:var(--font-body); font-weight:400; text-transform:none; letter-spacing:0; color:var(--ink); margin-bottom:0.4rem;">
+            <input type="checkbox" id="addon-candles" style="width:auto;"> Candles (+KES 50)
+          </label>
+          <label style="display:flex; align-items:center; gap:0.5rem; font-family:var(--font-body); font-weight:400; text-transform:none; letter-spacing:0; color:var(--ink);">
+            <input type="checkbox" id="addon-message" style="width:auto;"> Personalised message on cake (free)
+          </label>
+        </div>
+
+        <div class="form-field">
+          <label for="custname">Your Name</label>
+          <input type="text" id="custname" placeholder="e.g. Jane Wambui">
+        </div>
+
+        <div class="form-field">
+          <label for="notes">Notes (optional)</label>
+          <textarea id="notes" rows="3" placeholder="Any design ideas, colours, or occasion details..."></textarea>
+        </div>
+      </div>
+
+      <div class="order-summary">
+        <h3>Your Order</h3>
+        <div class="line"><span id="sum-flavour">Chocolate Cake</span><span id="sum-weight">1 kg</span></div>
+        <div class="line"><span>Cake price</span><span id="sum-cake-price">KES 1,200</span></div>
+        <div class="line"><span>Add-ons</span><span id="sum-addons">KES 0</span></div>
+        <div class="line"><span>Branch</span><span id="sum-branch">Mombasa</span></div>
+        <div class="total"><span>Total</span><span id="sum-total">KES 1,200</span></div>
+        <a href="#" id="whatsapp-order-btn" class="btn btn-primary" style="width:100%; text-align:center; margin-top:1.5rem; box-sizing:border-box;">Confirm via WhatsApp</a>
+        <p id="deposit-note" style="display:none; font-size:0.78rem; color:var(--saffron); margin-top:0.8rem; margin-bottom:0; font-weight:700;">Note: wedding/custom cakes require 75% payment upfront to confirm the order.</p>
+        <p style="font-size:0.75rem; color:var(--flour-dim); margin-top:0.8rem; margin-bottom:0;">Opens WhatsApp with your order pre-filled. Nothing is charged here — Maximiller confirms availability and payment directly with you.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Maliki Bakers</h4>
+        <p style="color:var(--flour-dim); max-width:32ch;">Family bakery serving Mombasa and Nairobi, fresh every day.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="mailto:kigangam@gmail.com">kigangam@gmail.com</a></li>
+          <li><a href="tel:+254722925612">0722 925 612</a></li>
+        </ul>
+        <div class="social-links">
+          <a href="https://www.instagram.com/malikibakers/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=102564581432765" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Maliki Bakers. All rights reserved.</span>
+      <span>Mombasa &middot; Nairobi, Kenya</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/order.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

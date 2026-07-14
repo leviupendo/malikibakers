@@ -21,6 +21,7 @@
       <li><a href="about.html">About</a></li>
       <li><a href="locations.html" class="active">Locations</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li><a href="order.html" class="order-cta">Order Now</a></li>
     </ul>
   </div>
 </header>
@@ -35,25 +36,56 @@
 
 <section>
   <div class="container">
-    <p class="placeholder-note">Placeholder — replace bracketed text with real addresses, hours, phone numbers, and Google Maps links.</p>
-    <div class="grid grid-2">
+    <div class="section-band">
+      <h2>Our Branches</h2>
+      <a href="tel:+254722925612" class="btn order-cta">Call Us</a>
+    </div>
+    <div class="section-band-body">
+      <p class="placeholder-note">Placeholder — replace bracketed text with real addresses, hours, phone numbers, and Google Maps links.</p>
 
-      <div class="location-card mombasa">
-        <h3>🏝️ Mombasa Branch</h3>
-        <p class="location-meta"><strong>Address:</strong> [Street, area, Mombasa]</p>
-        <p class="location-meta"><strong>Hours:</strong> [e.g. Mon&ndash;Sat 6:00am&ndash;8:00pm]</p>
-        <p class="location-meta"><strong>Phone:</strong> 0722 925 612</p>
-        <p class="location-meta"><strong>WhatsApp:</strong> [Add WhatsApp number]</p>
-        <a href="#" class="btn btn-outline" style="border-color:var(--crust); color:var(--crust); margin-top:0.8rem;">Open in Google Maps</a>
+      <div class="outlet-tabs">
+        <button class="outlet-tab-btn active" data-tab="mombasa">🏝️ Mombasa</button>
+        <button class="outlet-tab-btn" data-tab="nairobi">🏙️ Nairobi</button>
       </div>
 
-      <div class="location-card">
-        <h3>🏙️ Nairobi Branch</h3>
-        <p class="location-meta"><strong>Address:</strong> [Street, area, Nairobi]</p>
-        <p class="location-meta"><strong>Hours:</strong> [e.g. Mon&ndash;Sat 6:00am&ndash;8:00pm]</p>
-        <p class="location-meta"><strong>Phone:</strong> 0722 925 612</p>
-        <p class="location-meta"><strong>WhatsApp:</strong> [Add WhatsApp number]</p>
-        <a href="#" class="btn btn-outline" style="border-color:var(--crust); color:var(--crust); margin-top:0.8rem;">Open in Google Maps</a>
+      <div class="outlet-panel active" data-panel="mombasa">
+        <div class="location-card mombasa">
+          <h3>🏝️ Mombasa Branch</h3>
+          <p class="location-meta"><strong>Address:</strong> [Street, area, Mombasa]</p>
+          <p class="location-meta"><strong>Phone:</strong> <a href="tel:+254722925612" style="color:var(--crust);">0722 925 612</a></p>
+          <p class="location-meta"><strong>WhatsApp:</strong> <a href="https://wa.me/254722925612" style="color:var(--crust);">0722 925 612</a></p>
+          <a href="#" class="btn btn-outline" style="border-color:var(--crust); color:var(--crust); margin-top:0.8rem;">Open in Google Maps</a>
+        </div>
+        <div class="hours-table">
+          <h4>Working Hours &mdash; Mombasa</h4>
+          <div class="hours-row"><span class="day">Monday</span><span class="time">8:00 AM – 6:00 PM</span></div>
+          <div class="hours-row"><span class="day">Tuesday</span><span class="time">8:00 AM – 6:00 PM</span></div>
+          <div class="hours-row"><span class="day">Wednesday</span><span class="time">8:00 AM – 6:00 PM</span></div>
+          <div class="hours-row"><span class="day">Thursday</span><span class="time">8:00 AM – 6:00 PM</span></div>
+          <div class="hours-row"><span class="day">Friday</span><span class="time">8:00 AM – 6:00 PM</span></div>
+          <div class="hours-row"><span class="day">Saturday</span><span class="time">8:00 AM – 6:00 PM</span></div>
+          <div class="hours-row closed"><span class="day">Sunday</span><span class="time">Closed</span></div>
+        </div>
+      </div>
+
+      <div class="outlet-panel" data-panel="nairobi">
+        <div class="location-card">
+          <h3>🏙️ Nairobi Branch</h3>
+          <p class="location-meta"><strong>Address:</strong> [Street, area, Nairobi]</p>
+          <p class="location-meta"><strong>Phone:</strong> <a href="tel:+254726637388" style="color:var(--crust);">0726 637 388</a></p>
+          <p class="location-meta"><strong>WhatsApp:</strong> <a href="https://wa.me/254726637388" style="color:var(--crust);">0726 637 388</a></p>
+          <a href="#" class="btn btn-outline" style="border-color:var(--crust); color:var(--crust); margin-top:0.8rem;">Open in Google Maps</a>
+        </div>
+        <div class="hours-table">
+          <h4>Working Hours &mdash; Nairobi</h4>
+          <div class="hours-row"><span class="day">Monday</span><span class="time">8:00 AM – 6:00 PM</span></div>
+          <div class="hours-row"><span class="day">Tuesday</span><span class="time">8:00 AM – 6:00 PM</span></div>
+          <div class="hours-row"><span class="day">Wednesday</span><span class="time">8:00 AM – 6:00 PM</span></div>
+          <div class="hours-row"><span class="day">Thursday</span><span class="time">8:00 AM – 6:00 PM</span></div>
+          <div class="hours-row"><span class="day">Friday</span><span class="time">8:00 AM – 6:00 PM</span></div>
+          <div class="hours-row"><span class="day">Saturday</span><span class="time">8:00 AM – 6:00 PM</span></div>
+          <div class="hours-row closed"><span class="day">Sunday</span><span class="time">Closed</span></div>
+        </div>
       </div>
 
     </div>
@@ -88,8 +120,8 @@
           <li><a href="tel:+254722925612">0722 925 612</a></li>
         </ul>
         <div class="social-links">
-          <a href="https://instagram.com/malikibakers" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://facebook.com/malikibakers" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/malikibakers/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=102564581432765" target="_blank" rel="noopener">Facebook</a>
         </div>
       </div>
     </div>

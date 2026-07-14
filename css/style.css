@@ -434,6 +434,74 @@ section { padding: 4.5rem 0; }
 
 /* ---------- utility ---------- */
 
+/* ---------- cake illustrations (brand-style, in place of stock photos) ---------- */
+
+.cake-card {
+  background: var(--paper);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(43,27,20,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.cake-visual {
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cake-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(0,0,0,0.06) 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
+}
+
+.cake-icon { width: 52%; position: relative; z-index: 1; filter: drop-shadow(2px 3px 0 rgba(0,0,0,0.12)); }
+
+.cake-visual.choc     { background: #C99B6B; color: #5A3A22; }
+.cake-visual.vanilla  { background: #F1DFAE; color: #B8892E; }
+.cake-visual.redvelvet{ background: #E3B9BE; color: var(--hibiscus); }
+.cake-visual.fruit    { background: #D9C79A; color: #6E5225; }
+.cake-visual.blackforest { background: #C7A6A9; color: #4A2430; }
+.cake-visual.coconut  { background: #EFE9D6; color: #7C8F6E; }
+.cake-visual.lemon    { background: #F0E1A0; color: #A67D1E; }
+.cake-visual.cupcake  { background: #E7CBD1; color: var(--hibiscus); }
+.cake-visual.strawberry { background: #F2C6CE; color: #B23A54; }
+.cake-visual.pinacolada { background: #EAF0C8; color: #7C9A3D; }
+.cake-visual.blueberry  { background: #CFC9E8; color: #4E3F8C; }
+.cake-visual.orange     { background: #F4C98A; color: #C1621B; }
+.cake-visual.whiteforest{ background: #EFE7DD; color: #6B5A4A; }
+.cake-visual.donut      { background: #F6D8B8; color: #C97A2E; }
+.cake-visual.bread      { background: #E3C089; color: #8A5A24; }
+
+.cake-body {
+  padding: 1.3rem 1.4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cake-body h3 { margin-bottom: 0.3rem; font-size: 1.2rem; }
+.cake-body p { font-size: 0.9rem; color: var(--crust-soft); margin-bottom: 1rem; flex-grow: 1; }
+
+.cake-price {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--hibiscus);
+  font-size: 1rem;
+}
+
+.cake-price small {
+  font-weight: 400;
+  color: var(--crust-soft);
+  font-size: 0.75rem;
+}
+
 .placeholder-note {
   background: rgba(224,163,46,0.15);
   border: 1px dashed var(--saffron);
@@ -445,7 +513,339 @@ section { padding: 4.5rem 0; }
   margin: 0 0 1.5rem;
 }
 
+.photo-note {
+  background: rgba(75,100,85,0.12);
+  border: 1px dashed var(--cardamom);
+  color: var(--crust);
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  margin: 0 0 2rem;
+}
+
+/* ---------- occasion tiles ---------- */
+
+.occasion-tile {
+  background: var(--crust);
+  color: var(--flour);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.15s ease;
+  display: block;
+}
+.occasion-tile:hover { transform: translateY(-4px); }
+.occasion-tile .icon-wrap {
+  width: 64px; height: 64px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: var(--saffron);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--crust);
+}
+.occasion-tile .icon-wrap svg { width: 30px; height: 30px; }
+.occasion-tile h3 { color: var(--flour); font-size: 1.05rem; margin-bottom: 0.3rem; }
+.occasion-tile p { color: var(--flour-dim); font-size: 0.85rem; margin: 0; }
+
+/* ---------- testimonials ---------- */
+
+.testimonial-card {
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  border-top: 3px solid var(--saffron);
+}
+.testimonial-card .stars { color: var(--saffron); letter-spacing: 2px; margin-bottom: 0.8rem; font-size: 0.95rem; }
+.testimonial-card p.quote { font-style: italic; color: var(--ink); margin-bottom: 1rem; }
+.testimonial-card .who { font-family: var(--font-mono); font-size: 0.8rem; color: var(--crust-soft); }
+
+/* ---------- bold section band header (color-block, like a shop's category bar) ---------- */
+
+.section-band {
+  background: var(--hibiscus);
+  color: var(--flour);
+  padding: 1.1rem 1.5rem;
+  border-radius: var(--radius) var(--radius) 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 0;
+}
+.section-band h2 { color: var(--flour); margin: 0; font-size: 1.5rem; }
+.section-band .btn { padding: 0.6rem 1.1rem; font-size: 0.75rem; }
+.section-band-body {
+  background: var(--paper);
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 2rem 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* ---------- persistent order-now CTA in header ---------- */
+
+.order-cta {
+  background: var(--saffron) !important;
+  color: var(--crust) !important;
+  border-color: var(--saffron) !important;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+}
+.order-cta:hover { color: var(--crust) !important; }
+.order-cta::after { display: none !important; }
+
+@media (max-width: 760px) {
+  .order-cta {
+    display: block;
+    text-align: center;
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* ---------- quote banner (full-bleed, textured) ---------- */
+
+.quote-banner {
+  background: var(--crust);
+  background-image:
+    radial-gradient(circle, rgba(224,163,46,0.15) 2px, transparent 2px);
+  background-size: 22px 22px;
+  color: var(--flour);
+  padding: 4.5rem 1.5rem;
+  text-align: center;
+}
+.quote-banner blockquote {
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-style: italic;
+  color: var(--flour);
+  line-height: 1.5;
+}
+.quote-banner cite {
+  display: block;
+  margin-top: 1.2rem;
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 0.8rem;
+  color: var(--saffron);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ---------- outlet tab switcher ---------- */
+
+.outlet-tabs {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1.8rem;
+  flex-wrap: wrap;
+}
+.outlet-tab-btn {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius);
+  border: 2px solid var(--crust);
+  background: transparent;
+  color: var(--crust);
+  cursor: pointer;
+}
+.outlet-tab-btn.active {
+  background: var(--crust);
+  color: var(--flour);
+}
+.outlet-panel { display: none; }
+.outlet-panel.active { display: block; }
+
+.timeline { position: relative; padding-left: 2rem; border-left: 2px dashed var(--saffron); }
+.timeline-item { margin-bottom: 2rem; position: relative; }
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.45rem; top: 0.3rem;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--saffron);
+  border: 2px solid var(--crust);
+}
+.timeline-item .year { font-family: var(--font-mono); color: var(--hibiscus); font-size: 0.85rem; font-weight: 700; }
+
+/* ---------- working hours table (dark, day-by-day) ---------- */
+
+.hours-table {
+  background: var(--crust);
+  color: var(--flour);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.6rem;
+  margin-top: 1.2rem;
+}
+.hours-table h4 {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  color: var(--saffron);
+  border-left: 3px solid var(--saffron);
+  padding-left: 0.7rem;
+  margin: 0 0 1rem;
+}
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(241,230,200,0.12);
+  font-size: 0.92rem;
+}
+.hours-row:last-of-type { border-bottom: none; }
+.hours-row .day { color: var(--flour-dim); }
+.hours-row .time { font-family: var(--font-mono); }
+.hours-row.closed .time { color: var(--saffron); }
+
+/* ---------- quick info icon strip ---------- */
+
+.info-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+@media (max-width: 760px) { .info-strip { grid-template-columns: repeat(2, 1fr); } }
+
+.info-strip-item { display: flex; align-items: center; gap: 0.8rem; }
+.info-strip-item .icon-circle {
+  width: 46px; height: 46px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--flour-dim);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--hibiscus);
+}
+.info-strip-item .icon-circle svg { width: 22px; height: 22px; }
+.info-strip-item h4 { margin: 0; font-size: 0.92rem; color: var(--crust); font-family: var(--font-body); font-weight: 600; }
+.info-strip-item p { margin: 0; font-size: 0.8rem; color: var(--crust-soft); }
+
+/* ---------- cake card footer / category tag ---------- */
+
+.cake-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--hibiscus);
+  background: rgba(140,47,57,0.1);
+  padding: 0.2rem 0.55rem;
+  border-radius: 3px;
+  margin-bottom: 0.5rem;
+  width: fit-content;
+}
+.cake-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-top: auto;
+}
+.cake-order-btn {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--hibiscus);
+  color: var(--flour);
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius);
+  white-space: nowrap;
+}
+.cake-order-btn:hover { background: var(--crust); }
+.cake-wait { font-family: var(--font-mono); font-size: 0.68rem; color: var(--crust-soft); margin-bottom: 0.6rem; }
+
+/* ---------- order flow: step indicator ---------- */
+
+.step-indicator {
+  background: var(--paper);
+  border-radius: 50px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 620px;
+  margin: 0 auto 3rem;
+}
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+.step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 15px; left: 55%;
+  width: 90%;
+  height: 2px;
+  background: rgba(43,27,20,0.15);
+  z-index: 0;
+}
+.step-circle {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--crust-soft);
+  color: var(--crust-soft);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  background: var(--paper);
+  position: relative;
+  z-index: 1;
+}
+.step.active .step-circle { background: var(--cardamom); border-color: var(--cardamom); color: var(--flour); }
+.step-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--crust-soft);
+}
+.step.active .step-label { color: var(--cardamom); font-weight: 700; }
+
+/* ---------- order form ---------- */
+
+.order-summary {
+  background: var(--crust);
+  color: var(--flour);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  position: sticky;
+  top: 90px;
+}
+.order-summary h3 { color: var(--flour); }
+.order-summary .line {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(241,230,200,0.15);
+  font-size: 0.92rem;
+}
+.order-summary .total {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--saffron);
+  font-size: 1.2rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .btn:hover { transform: none; }
+  .btn:hover, .occasion-tile:hover { transform: none; }
 }
